@@ -2,15 +2,36 @@
 
     \begin{center}
         \large{\input{include/work-title.tex}} \\
-    \large\textit{Иванов Иван Иванович} \\[1 cm]
+    \large\textit{Вязовцев Андрей Викторович} \\[1 cm]
 
-    Краткое описание задачи и основных результатов, мотивирующее прочитать весь текст.
+Конечные автоматы (англ. Finite State Machines, FSM) являются широко используемым шаблоном проектирования
+в языках описания аппаратуры (англ. Hardware Description Languages, HDL) для моделирования управляющей
+логики. Несмотря на свою простоту, реализации FSM подвержены различным классам ошибок проектирования,
+которые трудно обнаружить с помощью традиционных методов верификации на основе моделирования. В данной
+работе представлен SVAN-FSM --- инструмент для автоматического извлечения и статического анализа конечных
+автоматов из проектов на SystemVerilog. Инструмент работает на уровне списка логических элементов, строит
+графовые представления и выявляет недостижимые состояния, <<мертвые>> переходы, блокировки (deadlocks)
+и <<живые>> блокировки (livelocks). Также он обнаруживает взаимодействующие FSM для выявления межмодульных
+зависимостей управления и поддерживает параметризованные проекты, анализируя каждую развернутую инстанцию
+независимо. Результаты анализа сопоставляются с исходным кодом для повышения интерпретируемости.
+Инструмент был протестирован на нескольких открытых проектах RISC-V и системах, критичных с точки
+зрения безопасности, продемонстрировав свою эффективность на проектах промышленного масштаба.
 
     \vfill
 
     \textbf{Abstract} \\[1 cm]
 
-    Research and development of machine learning methods
+Finite state machines (FSMs) are a widely used design pattern in hardware description languages (HDLs)
+for modeling control logic. Despite their simplicity, FSM implementations are prone to various classes
+of design errors that are difficult to detect using conventional simulation-based verification techniques.
+This paper presents SVAN-FSM, a tool for automatic extraction and static analysis of FSMs from
+SystemVerilog designs. The tool operates on RTL netlists, builds graph-based representations, and detects
+unreachable states, dead transitions, deadlocks, and livelocks. It also identifies interacting FSMs
+to expose cross-module control dependencies and handles parameterized designs by analyzing each elaborated
+instance independently. Analysis results are mapped back to the source code to improve interpretability.
+The tool has been evaluated on multiple open-source RISC-V designs and security-critical projects,
+demonstrating its effectiveness on industrial-scale designs.
+
     \end{center}
 
 \end{abstract}

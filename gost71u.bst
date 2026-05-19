@@ -987,8 +987,6 @@ FUNCTION {article}
 { output.bibitem
   author.before
   format.btitle "title" output.check
-  new.slash
-  author.after
   new.dblslash
   journal emphasize "journal" output.check
   new.block
